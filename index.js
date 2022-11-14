@@ -1,5 +1,4 @@
 const express = require('express')
-const req = require('express/lib/request')
 const app = express()
 const port = process.env.PORT || 8080
 
@@ -112,3 +111,5 @@ app.use((err, req, res, next) => {
 app.listen(port, () => {
   console.log(`Covid API listening on port ${port}`)
 })
+
+module.exports = app;

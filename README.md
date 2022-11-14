@@ -1,28 +1,17 @@
-# Cloud Builder Live - June 2022
+# Cloud Builder Live - November 2022
 
 ![Cloud Builder Live Thumbnail](/images/thumbnail.jpg)
 
-In this session, David will review how to deploy an HTTP microservice from a GitHub repository using Cloud Run with continuous delivery.  This session will be for developers who are new to Cloud Run or even developers who are completely new to GCP.
+In this session, David will examine a powerful tool from AWS, Copilot, that can be used to deploy container workloads onto ECS, Fargate, and AppRunner. He also will be using it to setup Continuous Delivery with a GitHub repository.
 
-Watch it Live - [Cloud Builder Live - June 2022](https://www.youtube.com/watch?v=T5smOrlZnsc)  
+Watch it Live - [Cloud Builder Live - November 2022](https://www.youtube.com/watch?v=D7YLrey51g8)  
 
 ## Prerequisites
 
-I'm trying to have as few prerequisites as possible for this one.  That being said, the following would be helpful:
+I'm trying to have as few prerequisites as possible for this one.  That being said, the following are needed to work with AWS Copilot:
 
-- VS Code ([install](https://code.visualstudio.com/))
-- ThunderClient for VS Code ([install](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client))
-- Docker ([install](https://www.docker.com/))
-- GCP Account (if you don't have one, I'll tell you how to set one up)
-
-## Branches and Code
-
-This repository has a container for sharing COVID data via an API.  You can read more about the data below.  This is not designed to be a production application, but it is instead a microservice for use in cloud demos.  
-
-| Branch | Description |
-|--------|-------------|
-| **main** | This is the initial state of the application at the beginning of the episode. |
-| **finish** | This is the end state of the application from the episode | 
+- AWS CLI - [Install](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- Docker Desktop - [Install on Mac](https://docs.docker.com/desktop/install/mac-install/) | [Install on Windows](https://docs.docker.com/desktop/install/windows-install/)
 
 ## Data Notes
 
