@@ -1,17 +1,17 @@
-const express = require('express')
-const app = express()
-const port = process.env.PORT || 8080
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8080;
 
 // Get COVID data in memory
 // This entire JSON file (over 100MB) is read into memory.  This would be
 // handled much differently in a real production system.  This was done in
 // this manner to simplify the demo.
-const data = require('./data.json')
+const data = require('./data.json');
 
 // Default 'Hello World' route
 app.get('/', (req, res) => {
   res.json({ version: '1.10' })
-})
+});
 
 /**
  * API to get all of the countries included in the data
@@ -28,7 +28,7 @@ app.get('/api/countries', (req, res, next) => {
     }
   })
   res.json({ countries })
-})
+});
 
 /**
  * API to get the COVID stats for a specific country on a specific day
@@ -69,7 +69,7 @@ app.get('/api/:country/:date', (req, res, next) => {
 
   // Return
   res.json(output)
-})
+});
 
 /**
  * API to get Country data alongside the most recent date of COVID stats
@@ -82,7 +82,7 @@ app.get('/api/:country/:date', (req, res, next) => {
  app.get('/api/:country', (req, res, next) => {
   // Does country exist
   if(!data[req.params.country]) {
-    res.status(404).json({ message: `Country ${req.params.country} not found`})
+    res.status(404).json({ message: `Country ${req.params.country} not found`});
     return;
   }
 
@@ -96,20 +96,20 @@ app.get('/api/:country/:date', (req, res, next) => {
   const output = {
     ...countryData,
     data: latestDate
-  }
+  };
 
   // Return
-  res.json(output)
-})
+  res.json(output);
+});
 
 // Default Error Handler
 app.use((err, req, res, next) => {
-  res.status(500).json({ message: `Server Error: ${err}`})
+  res.status(500).json({ message: `Server Error: ${err}`});
   console.dir(err);
-})
+});
 
 app.listen(port, () => {
-  console.log(`Covid API listening on port ${port}`)
-})
+  console.log(`Covid API listening on port ${port}`);
+});
 
 module.exports = app;
